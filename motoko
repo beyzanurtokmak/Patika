@@ -1,43 +1,43 @@
-// hesap makinesi
-// değişkenler (let -> immutable, var -> mutable)
-// operatörler
-// async metodu
+// calculator
+// variables (let -> immutable, var -> mutable)
+// operators
+//async method
 // if condition
 
-// canister => akıllı sözleşme
+// canister => smart contract
 
-actor hesap_makinesi {
-  var hucre : Int = 0;
-  // toplama
-  // fonksiyon
-  public func toplama(s : Int) : async Int {
-    hucre += s;
-    hucre
-    //(Debug.print(debug_show (hucre));)
-  };
-  // çıkarma
-  public func cikarma(s : Int) : async Int {
-    hucre -= s;
-    hucre;
-  };
-  // çarpma
-  public func carpma(s : Int) : async Int {
-    hucre *= s;
-    hucre;
-  };
-  // bölme
-  public func bolme(s : Int) : async ?Int {
-    if (s == 0) {
-      null;
-    } else {
-      hucre /= s;
-      ?hucre;
-    };
-  };
+actor calculator {
+   var cell : Int = 0;
+   // add up
+   // function
+   public func collection(s : Int) : async Int {
+     cell += s;
+     cell
+     //(Debug.print(debug_show (cell));)
+   };
+   //subtract
+   public func extraction(s : Int) : async Int {
+     cell -= s;
+     cell;
+   };
+   // impact
+   public func multiply(s : Int) : async Int {
+     cell *= s;
+     cell;
+   };
+   // divide
+   public func section(s : Int) : async ?Int {
+     if (s == 0) {
+       null;
+     } else {
+       cell /= s;
+       ?cell;
+     };
+   };
 
-  // temizle
-  public func temizle() : async () {
-    hucre := 0;
-  };
+   // clean
+   public func clear() : async () {
+     cell := 0;
+   };
 
 };
